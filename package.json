@@ -1,0 +1,25 @@
+{
+  "name": "kostrov",
+  "version": "1.0.0",
+  "description": "kostrov-emails",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-html-extend": "^1.1.6",
+    "gulp-inline-css": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivashev/kostrov-emails.git"
+  },
+  "author": "ivashev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivashev/kostrov-emails/issues"
+  },
+  "homepage": "https://github.com/ivashev/kostrov-emails#readme"
+}
