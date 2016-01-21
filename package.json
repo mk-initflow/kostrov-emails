@@ -6,8 +6,13 @@
     "gulp": "^3.9.0"
   },
   "devDependencies": {
+    "gulp-css-rebase-urls": "0.0.5",
     "gulp-html-extend": "^1.1.6",
-    "gulp-inline-css": "^3.0.0"
+    "gulp-inline-css": "^3.0.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.1.1",
+    "gulp-watch": "^4.3.5",
+    "rimraf": "^2.5.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
