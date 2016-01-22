@@ -51,7 +51,8 @@ gulp.task('html:build', function () {
                 applyStyleTags: true,
                 applyLinkTags: true,
                 removeStyleTags: true,
-                removeLinkTags: true
+                removeLinkTags: true,
+                removeHtmlSelectors: true
         }))
         .pipe(gulp.dest(path.build.html));
 });

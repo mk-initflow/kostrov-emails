@@ -98,14 +98,21 @@ span.center {
 	}
 }
 
+a.action {
+	padding-bottom: 15px;
+}
+
 td {
 	&:first-child:last-child {
 		width: 100%;
 		padding-left: 40px;
 		padding-right: 40px;
 
+
 		&.wrapper {
 			padding: 0px;
+			padding-left: 0px;
+			padding-right: 0px;
 		}
 	}
 }
@@ -159,6 +166,14 @@ tr {
 		td {
 			font-size: 14px;
 			line-height: 25px;
+		}
+
+		.banner {
+			tr {
+				td {
+					font-size: 36px;
+				}
+			}
 		}
 
 		&.f {
@@ -291,7 +306,7 @@ tr {
 	&.flag {
 		td {
 			text-align: center;
-			padding-bottom: 20px;
+			padding-bottom: 30px;
 
 			span {
 				display: inline-block;
@@ -337,9 +352,15 @@ tr {
 	}
 }
 
+.banner-wrapper {
+	text-align: center;
+}
+
 .banner {
+	display: inline-block;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 
 	tr {
 		td {
@@ -349,6 +370,7 @@ tr {
 			text-transform: uppercase;
 			text-align: center;
 			font-size: 36px;
+			line-height: 44px;
 		}
 	}
 }
@@ -381,6 +403,39 @@ tr {
 					text-transform: uppercase;
 				}
 			}	
+		}
+	}
+}
+
+.items3 {
+	text-align: center;
+
+	.item {
+		max-width: 150px;
+		padding: 20px 20px;
+
+		&:nth-child(2n+1) {
+			padding-right: 20px;
+		}
+
+		table {
+			padding-top: 20px;
+
+			tr {
+				td {
+					padding: 7px 0px 0px 0px;
+					padding-left: 0px;
+					padding-right: 0px;
+					font-size: 14px;
+					line-height: 20px;
+				}
+
+				&.name {
+					td {
+						padding-top: 20px;
+					}
+				}	
+			}
 		}
 	}
 }

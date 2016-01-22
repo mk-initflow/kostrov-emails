@@ -80,6 +80,10 @@ span.center {
   width: 100%;
 }
 
+a.action {
+  padding-bottom: 15px;
+}
+
 td:first-child:last-child {
   width: 100%;
   padding-left: 40px;
@@ -88,6 +92,8 @@ td:first-child:last-child {
 
 td:first-child:last-child.wrapper {
   padding: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 tr.logo td {
@@ -129,6 +135,10 @@ tr.menu td table tr td a {
 tr.text td {
   font-size: 14px;
   line-height: 25px;
+}
+
+tr.text .banner tr td {
+  font-size: 36px;
 }
 
 tr.text.f td {
@@ -233,7 +243,7 @@ tr .auth tr td:last-child span {
 
 tr.flag td {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 tr.flag td span {
@@ -275,9 +285,15 @@ tr.socials td span.instagram {
   background-image: url("images/instagram.png");
 }
 
+.banner-wrapper {
+  text-align: center;
+}
+
 .banner {
+  display: inline-block;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .banner tr td {
@@ -287,6 +303,7 @@ tr.socials td span.instagram {
   text-transform: uppercase;
   text-align: center;
   font-size: 36px;
+  line-height: 44px;
 }
 
 .item {
@@ -314,6 +331,35 @@ tr.socials td span.instagram {
 
 .item table tr.name td {
   text-transform: uppercase;
+}
+
+.items3 {
+  text-align: center;
+}
+
+.items3 .item {
+  max-width: 150px;
+  padding: 20px 20px;
+}
+
+.items3 .item:nth-child(2n+1) {
+  padding-right: 20px;
+}
+
+.items3 .item table {
+  padding-top: 20px;
+}
+
+.items3 .item table tr td {
+  padding: 7px 0px 0px 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.items3 .item table tr.name td {
+  padding-top: 20px;
 }
 
 .modal .modal-dialog {
