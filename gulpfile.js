@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var nodemailer = require('nodemailer');
 var plugins = require('gulp-load-plugins')({
 	scope: ['dependencies', 'devDependencies', 'peerDependencies'],
 	rename: {
@@ -80,3 +81,38 @@ gulp.task('build', [
 ]);
 
 gulp.task('default', ['build', 'watch']);
+
+
+
+
+gulp.task('sendMail_k1', function(){
+    sendMail('build/k1.html', 'K1')
+});
+
+function sendMail(file, title){
+    if(file === null)
+        return;
+         
+    var transport = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: '4ttttest@gmail.com',
+        pass: 'HoHoHo234'
+      }
+    });
+
+    transport.sendMail({
+          from: 'Email Test <4ttttest@gmail.com>',
+          to: 'Maksim Kuznetsov <mak.kooz@gmail.com>',
+          subject: title || 'Email testing',
+          html: {
+            path: file
+          },
+        }, function(err, responseStatus) {
+          if (err) {
+            console.log(err);
+          } else{
+            console.log('Success');
+          }
+        });
+}
