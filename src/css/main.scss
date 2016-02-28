@@ -1,5 +1,7 @@
 ﻿@charset "utf-8";
 
+$image-path : "../images";
+
 $link-color: #6bb8da;
 $background-color: #f7f7f7;
 $border-grey: #cacaca;
@@ -27,6 +29,11 @@ span {
 	}
 }
 
+.p-h-0 {
+	padding-left: 0 !important;
+	padding-right: 0 !important;	
+}
+
 a {
 	display: inline-block;
 	color: inherit;
@@ -43,14 +50,21 @@ table {
 	width: 100%;
 }
 
+.text-center{
+	text-align: center;
+}
+
+div.center,
 span.center {
 	display: block;
 	max-width: 600px;
 	margin: 0 auto;
-	text-align: center;
 	padding: 25px 0px;
 }
 
+img{
+	max-width: 100%
+}
 
 
 .letter {
@@ -63,25 +77,21 @@ span.center {
 		padding: 0;
 	}
 }
+.letter-body {
+	min-width: 500px;
+}
 
 .top-border, .bottom-border {
 	td {
 		width: 100%;
 		height: 10px;
-		background: url("../images/border-background-reverse.png");
-		background-size: 596px 20px;
-	}
-}
+		padding-left: 0;
+		padding-right: 0;
+        font-size:0;
 
-.top-border {
-	td {
-		background-position: 0% 100%;
-	}
-}
-
-.bottom-border {
-	td {
-		background-position: 0% 0%;
+        img{
+            display:block;
+        }
 	}
 }
 
@@ -125,31 +135,31 @@ tr {
 
 			a {
 				display: block;
-				height: 94px;
-				background: url("../images/logo.png");
-				background-repeat: no-repeat;
-				background-size: 93.5px;
 			}
 		}
 	}
 
 	&.menu {
-		td {
-			background: url("../images/menu-background.png");
+		& > td {
+			background: url("#{$image-path}/menu-background.png");
 			background-size: 100% 60px;
 			background-repeat: no-repeat;
-			background-position: -20px 0px;
+			background-position: right;
+			padding-right: 0;
 
 			table {
-				max-width: 990px;
 				height: 60px;
+			    padding-left: 0;
+			    padding-right: 20px;
 				text-transform: uppercase;
 				font-size: 11px;
-
+                table-layout:fixed;
 				tr {
 					td {
-						&:first-child {
-							padding-left: 0px;
+			            padding-left: 0;
+			            padding-right: 0;
+						span {
+							padding: 2% 0 2%;
 						}
 
 						a {
@@ -205,6 +215,8 @@ tr {
 			}
 		}
 	}
+
+
 
 	.info, .items {
 		padding-bottom: 20px;
@@ -307,15 +319,6 @@ tr {
 		td {
 			text-align: center;
 			padding-bottom: 30px;
-
-			span {
-				display: inline-block;
-				width: 110px;
-				height: 15px;
-				background: url("../images/flag.png");
-				background-repeat: no-repeat;
-				background-size: 100%;
-			}
 		}
 	}
 
@@ -324,28 +327,26 @@ tr {
 			padding: 25px 0px;
 			text-align: center;
 
-			span {
+			img {
 				margin: 0px 20px;
-				background-size: 100%;
-				background-repeat: no-repeat;
 				vertical-align: middle;
 
 				&.facebook {
 					width: 9px;
 					height: 17px;
-					background-image: url("../images/facebook.png");
+					background-image: url("#{$image-path}/images/facebook.png");
 				}
 
 				&.vk {
 					width: 21px;
 					height: 12px;
-					background-image: url("../images/vk.png");
+					background-image: url("#{$image-path}/images/vk.png");
 				}
 
 				&.instagram {
 					width: 15px;
 					height: 15px;
-					background-image: url("../images/instagram.png");
+					background-image: url("#{$image-path}/images/instagram.png");
 				}
 			}
 		}
